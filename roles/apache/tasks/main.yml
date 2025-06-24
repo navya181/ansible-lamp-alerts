@@ -1,0 +1,13 @@
+- name: install Apache
+  apt:
+    name: apache2
+    state: latest
+    update_cache: yes
+  notify: Restart Apache  
+
+- name: Start Apache Server
+  systemd:
+    name: apache2
+    state: started
+    enabled: yes
+

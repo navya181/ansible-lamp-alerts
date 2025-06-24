@@ -1,0 +1,22 @@
+- name: Create Alertmanager config directory
+  file:
+    path: /etc/alertmanager
+    state: directory
+    mode: '0755'
+    
+- name: Upload Alertmanager config file
+  copy:
+    dest: /etc/alertmanager/alertmanager.yml
+    content: |
+      global:
+        resolve_timeout: 5m
+
+      route:
+        receiver: spike-sh
+
+      receivers:
+        - name: spike-sh
+          webhook_configs:                 
+            - url: "https://hooks.spike.sh/c9e3d06511f540bb0ec0/push-events"
+              send_resolved: true
+  notify: Restart Alertmanager

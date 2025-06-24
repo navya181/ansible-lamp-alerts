@@ -1,0 +1,14 @@
+- name: Restart Apache
+  systemd:
+    name: apache2
+    state: restarted
+
+- name: Restart Alertmanager
+  systemd:
+    name: prometheus-alertmanager
+    state: restarted
+
+- name: Restart Prometheus
+  systemd:
+    name: prometheus
+    state: restarted

@@ -1,0 +1,50 @@
+groups:
+- name: simple-alerts
+  rules:
+  - alert: ApacheDown
+    expr: up{job="apache"} == 0
+    for: 1m
+    labels:
+      severity: critical
+    annotations:
+      summary: "Apache is down on {{ $labels.instance }}"
+      description: "Apache server is not responding on {{ $labels.instance }}"
+
+  - alert: MySQLDown
+    expr: mysql_up == 0
+    for: 1m
+    labels:
+      severity: critical
+    annotations:
+      summary: "MySQL is Down"
+      description: "MySQL is not responding on {{ $labels.instance }}"
+
+  - alert: HighCPUUsage
+    expr: 100 - (avg by (instance) (irate(node_cpu_seconds_total{mode="idle"}[2m])) * 100) > 80
+    for: 2m
+    labels:
+      severity: warning
+    annotations:
+      summary: "High CPU usage on {{ $labels.instance }}"
+      description: "CPU usage is above 80% on {{ $labels.instance }}"
+
+  - alert: LowMemory
+    expr: (node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes) * 100 < 10
+    for: 2m
+    labels:
+      severity: critical
+    annotations:
+      summary: "Critically low memory on {{ $labels.instance }}"
+      description: "Available memory is less than 10% on {{ $labels.instance }}"
+
+  - alert: DiskFull
+    expr: (1 - (node_filesystem_free_bytes{fstype!="tmpfs",fstype!="overlay"} / node_filesystem_size_bytes{fstype!="tmpfs",fstype!="overlay"})) > 0.9
+    for: 2m
+    labels:
+      severity: warning
+    annotations:
+      summary: "Disk almost full on {{ $labels.instance }}"
+      description: "Disk usage is more than 90% on {{ $labels.instance }}"
+
+
+

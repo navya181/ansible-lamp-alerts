@@ -1,0 +1,21 @@
+- name: install mysql server
+  apt:
+    name: mysql-server
+    state: present
+    update_cache: yes
+
+# Ensure Python 3 and PyMySQL are installed (required for Ansible MySQL modules)
+- name: start and enable mysql Server
+  systemd:
+    name: mysql
+    state: started
+    enabled: yes
+
+- name: Set MySQL root password
+  mysql_user:
+    name: root
+    host: localhost
+    password: navya@181
+    login_user: root
+    login_password: navya@181
+    check_implicit_admin: yes

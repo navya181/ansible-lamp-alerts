@@ -1,0 +1,59 @@
+- name: Install Prometheus and Alertmanager
+  apt:
+    name:
+      - prometheus                        # Prometheus monitoring server package
+      - prometheus-alertmanager           # Alertmanager for managing alerts
+    state: present
+    update_cache: yes
+
+- name: Install Node Exporter for Prometheus
+  apt:
+    name: prometheus-node-exporter      # Exports machine metrics for Prometheus
+    state: present
+    update_cache: yes
+
+- name: Start and enable Prometheus
+  systemd:
+    name: prometheus
+    state: started
+    enabled: yes
+
+- name: Start and enable Alertmanager
+  systemd:
+    name: prometheus-alertmanager
+    state: started
+    enabled: yes
+
+- name: Start and enable Node Exporter
+  systemd:
+    name: prometheus-node-exporter
+    state: started
+    enabled: yes
+
+- name: Create Prometheus config directory
+  file:
+    path: /etc/prometheus
+    state: directory
+    mode: '0755'
+
+- name: Upload Alert rules
+  copy:
+    src: alert-rules.yml
+    dest: /etc/prometheus/alert-rules.yml
+  notify: Restart Prometheus
+
+- name: Ensure alert rule file is referenced in Prometheus config
+  lineinfile:
+    path: /etc/prometheus/prometheus.yml
+    insertafter: '^alerting:'
+    line: 'rule_files:'
+    state: present
+
+- name: Ensure alert rule path is present
+  lineinfile:
+    path: /etc/prometheus/prometheus.yml
+    insertafter: '^rule_files:'
+    line: '  - "/etc/prometheus/alert-rules.yml"'
+    state: present
+  notify: Restart Prometheus
+

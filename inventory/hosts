@@ -1,0 +1,1 @@
+172.18.212.152 ansible_user=navyasattineni ansible_ssh_private_key_file=/home/navyasattineni/.ssh/ansible_key

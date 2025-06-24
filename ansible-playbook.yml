@@ -1,0 +1,22 @@
+---
+- name: ansible project
+  hosts: all
+  become: yes
+  remote_user: navyasattineni
+
+  handlers:
+    - import_tasks: handlers/main.yml
+
+  roles:
+    - ssh
+    - firewall
+    - apache
+    - mysql
+    - php
+    - monitoring
+    - alertmanager
+
+
+    
+
+  

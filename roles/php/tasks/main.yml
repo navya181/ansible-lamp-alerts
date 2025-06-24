@@ -1,0 +1,12 @@
+- name: install php and modules
+  apt:
+    name:
+      - php
+      - libapache2-mod-php      # Enables Apache to process PHP files
+      - php-mysql               # Lets PHP talk to MySQL
+    state: present
+    update_cache: yes
+    
+  notify:
+  - Restart Apache
+
