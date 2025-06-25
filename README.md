@@ -84,3 +84,14 @@ ansible-playbook -i inventory/hosts ansible-playbook.yml --ask-become-pass
 ``` 
 ✅ Use --ask-become-pass if your remote user requires sudo privileges (e.g., on Ubuntu).
 This flag will prompt for the sudo password during execution.
+
+📊 Monitoring & Alerting Access
+Prometheus Metrics
+http://<your-server-ip>:9100/metrics
+
+Alertmanager Dashboard
+http://<your-server-ip>:9093
+
+Alerts
+Triggered by Prometheus alert rules and sent to Spike.sh via webhook.
+You’ll receive real-time notifications through email, SMS, and phone call for service failures like Apache/MySQL downtime.
