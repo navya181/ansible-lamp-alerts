@@ -95,4 +95,20 @@ This flag will prompt for the sudo password during execution.
 
 - **Alerts**  
   Triggered by Prometheus alert rules and sent to **Spike.sh** via webhook.  
-  You’ll receive real-time notifications through **email**, **SMS**, and **phone call** for service failures like Apache/MySQL downtime
+  You’ll receive real-time notifications through **email**, **SMS**, and **phone call** for service failures like Apache/MySQL downtime.
+  
+---
+
+## 🔐 Security Notes
+
+- Passwords (like the MySQL root password) are hardcoded for demonstration purposes.  
+  ➤ Use **Ansible Vault** to encrypt sensitive data in real-world projects.
+
+- Ensure that your SSH key (`~/.ssh/ansible_key.pub`) exists and is securely configured on your control machine.
+
+---
+
+## 👤 Author
+
+**Navya Sattineni**  
+Feel free to connect on [LinkedIn](https://www.linkedin.com/in/navya-ratna-kumari-sattineni-a03986265/)
