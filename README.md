@@ -61,4 +61,26 @@ ansible-lamp-monitor-alert/
 │       └── tasks/main.yml
 ├── ansible-playbook.yml          # Main playbook
 ```
+## 🚀 How to Use
 
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/ansible-lamp-alert.git
+cd ansible-lamp-alert
+``` 
+
+### 2. Update Inventory File
+Edit the inventory file with your server details:
+```ini
+[webservers]
+<your-server-ip> ansible_user=your_username ansible_ssh_private_key_file=/home/your_username/.ssh/ansible_key 
+``` 
+
+### 3. Run the Playbook
+
+```bash
+ansible-playbook -i inventory/hosts ansible-playbook.yml --ask-become-pass
+``` 
+✅ Use --ask-become-pass if your remote user requires sudo privileges (e.g., on Ubuntu).
+This flag will prompt for the sudo password during execution.
