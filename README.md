@@ -24,6 +24,20 @@ Designed for beginner-to-intermediate DevOps learners, this project demonstrates
 ---
 
 ## 🛠️ Tools Used
+
+- **Ansible** – Automation engine
+- **Ubuntu Server** – Installed in a local Virtual Machine (VM)
+- **Apache2**, **MySQL**, **PHP**
+- **UFW** – Uncomplicated Firewall
+- **Prometheus**, **Alertmanager**
+- **Spike.sh** – Alert notifications (email/phone/SMS)
+- **VS Code** – Editor used to write and manage Ansible scripts
+
+---
+
+## 📁 Project Structure
+
+ansible-lamp-monitor-alert/
 ├── inventory/
 │ └── hosts # Inventory file for target hosts
 ├── handlers/
@@ -46,16 +60,3 @@ Designed for beginner-to-intermediate DevOps learners, this project demonstrates
 │ └── tasks/main.yml
 ├── ansible-playbook.yml        
 
-- **Ansible** – Automation engine
-- **Ubuntu Server** – Installed in a local Virtual Machine (VM)
-- **Apache2**, **MySQL**, **PHP**
-- **UFW** – Uncomplicated Firewall
-- **Prometheus**, **Alertmanager**
-- **Spike.sh** – Alert notifications (email/phone/SMS)
-- **VS Code** – Editor used to write and manage Ansible scripts
-
----
-
-## 📁 Project Structure
-
-ansible-lamp-monitor-alert/
