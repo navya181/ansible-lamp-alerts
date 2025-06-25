@@ -37,26 +37,28 @@ Designed for beginner-to-intermediate DevOps learners, this project demonstrates
 
 ## 📁 Project Structure
 
+📁 Project Structure
+
 ansible-lamp-monitor-alert/
 ├── inventory/
-│ └── hosts # Inventory file for target hosts
+│   └── hosts                  # Inventory file for target hosts
 ├── handlers/
-│ └── main.yml # Handlers to restart services
+│   └── main.yml              # Handlers to restart services
 ├── roles/
-│ ├── alertmanager/           
-│ │ └── tasks/main.yml
-│ ├── apache/ # Apache setup
-│ │ └── tasks/main.yml
-│ ├── firewall/                
-│ │ └── tasks/main.yml
-│ ├── monitoring/             
-│ │ ├── files/alert-rules.yml
-│ │ └── tasks/main.yml
-│ ├── mysql/                  
-│ │ └── tasks/main.yml
-│ ├── php/                 
-│ │ └── tasks/main.yml
-│ └── ssh/                   
-│ └── tasks/main.yml
-├── ansible-playbook.yml        
+│   ├── alertmanager/
+│   │   └── tasks/main.yml
+│   ├── apache/               # Apache setup
+│   │   └── tasks/main.yml
+│   ├── firewall/
+│   │   └── tasks/main.yml
+│   ├── monitoring/
+│   │   ├── files/alert-rules.yml
+│   │   └── tasks/main.yml
+│   ├── mysql/
+│   │   └── tasks/main.yml
+│   ├── php/
+│   │   └── tasks/main.yml
+│   └── ssh/
+│       └── tasks/main.yml
+├── ansible-playbook.yml       # Main playbook
 
