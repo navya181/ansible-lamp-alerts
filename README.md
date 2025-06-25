@@ -35,8 +35,9 @@ Designed for beginner-to-intermediate DevOps learners, this project demonstrates
 
 ---
 
-📁 Project Structure
+## 📁 Project Structure
 
+```bash
 ansible-lamp-monitor-alert/
 ├── inventory/
 │   └── hosts                      # Inventory file for target hosts
@@ -59,4 +60,5 @@ ansible-lamp-monitor-alert/
 │   └── ssh/
 │       └── tasks/main.yml
 ├── ansible-playbook.yml          # Main playbook
+```
 
