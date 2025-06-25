@@ -37,8 +37,6 @@ Designed for beginner-to-intermediate DevOps learners, this project demonstrates
 
 ## 📁 Project Structure
 
-📁 Project Structure
-
 ansible-lamp-monitor-alert/
 ├── inventory/
 │   └── hosts                  # Inventory file for target hosts
