@@ -5,6 +5,7 @@
       - prometheus
       # Alertmanager for managing alerts
       - prometheus-alertmanager
+    state: present
     update_cache: yes
 
 - name: Install Node Exporter for Prometheus
