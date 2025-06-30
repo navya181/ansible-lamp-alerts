@@ -17,6 +17,6 @@
       receivers:
         - name: spike-sh
           webhook_configs:                 
-            - url: "https://hooks.spike.sh/c9e3d06511f540bb0ec0/push-events"
+            - url: "<<WEBHOOK_URL_OF_SPIKE.SH>"
               send_resolved: true
   notify: Restart Alertmanager
