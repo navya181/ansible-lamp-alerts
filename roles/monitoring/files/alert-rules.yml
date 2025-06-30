@@ -16,7 +16,7 @@ groups:
     labels:
       severity: critical
     annotations:
-      summary: "MySQL is Down"
+      summary: "MySQL is down"
       description: "MySQL is not responding on {{ $labels.instance }}"
 
   - alert: HighCPUUsage
