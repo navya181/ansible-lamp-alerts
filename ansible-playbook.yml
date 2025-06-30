@@ -2,7 +2,7 @@
 - name: ansible project
   hosts: all
   become: yes
-  remote_user: navyasattineni
+  remote_user: <your-username>
 
   handlers:
     - import_tasks: handlers/main.yml
