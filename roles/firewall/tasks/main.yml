@@ -1,5 +1,5 @@
- #This task allows incoming traffic through the firewall for Apache.
-- name: UFW is installed
+# This task installs and configures UFW to allow traffic for Apache, Prometheus, Node Exporter, and Alertmanager.
+- name: Ensure UFW is installed
   apt:
     name: ufw
     state: present
@@ -11,7 +11,7 @@
     name: "Apache Full"
 
 - name: Enable UFW firewall
-  command: ufw --force enable     #--force option makes the command run without interactive confirmation.
+  command: ufw --force enable     # --force bypasses interactive confirmation
   become: yes
 
 - name: Allow Prometheus port
