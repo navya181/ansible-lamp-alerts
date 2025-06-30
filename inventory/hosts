@@ -1,1 +1,1 @@
-172.18.212.152 ansible_user=navyasattineni ansible_ssh_private_key_file=/home/navyasattineni/.ssh/ansible_key
+<your-server-ip> ansible_user=your_username ansible_ssh_private_key_file=/home/your_username/.ssh/ansible_key 
