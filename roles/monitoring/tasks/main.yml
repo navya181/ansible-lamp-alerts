@@ -1,14 +1,15 @@
 - name: Install Prometheus and Alertmanager
   apt:
     name:
-      - prometheus                        # Prometheus monitoring server package
-      - prometheus-alertmanager           # Alertmanager for managing alerts
-    state: present
+      # Prometheus monitoring server package
+      - prometheus
+      # Alertmanager for managing alerts
+      - prometheus-alertmanager
     update_cache: yes
 
 - name: Install Node Exporter for Prometheus
   apt:
-    name: prometheus-node-exporter      # Exports machine metrics for Prometheus
+    name: prometheus-node-exporter       # Exports machine metrics for Prometheus
     state: present
     update_cache: yes
 
