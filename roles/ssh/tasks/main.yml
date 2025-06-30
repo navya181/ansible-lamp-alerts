@@ -6,13 +6,13 @@
 
 - name: Create .ssh directory if it doesn't exist
   file:
-    path: "/home/navyasattineni/.ssh"
+    path: "home/{{ ansible_user }}/.ssh"
     state: directory
-    owner: "navyasattineni"
-    group: "navyasattineni"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
     mode: '0700'          # Important for security
 
 - name: Add your SSH public key for remote access
   authorized_key:
-    user: "navyasattineni"
-    key: "{{ lookup('file', '~/.ssh/ansible_key.pub') }}"
+    user: "{{ ansible_user }}"
+    key: "{{ lookup('file', ssh_public_key_path) }}"
