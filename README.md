@@ -114,9 +114,9 @@ This flag will prompt for the sudo password during execution.
 
 Below are examples demonstrating how the alerting system works when MySQL goes down:
 
-### ✅ Phone Call Notification (Spike.sh)
+### ✅ Successful Playbook Run
 
-![Phone Call](./output_images/spike-sh-call.png)
+![Playbook Success](./output_images/playbook-run-success.png)
 
 ### 📉 Prometheus Alert Triggered
 
@@ -126,13 +126,17 @@ Below are examples demonstrating how the alerting system works when MySQL goes d
 
 ![Alertmanager](./output_images/alertmanager-mysql-down.png)
 
+### 🧾 Spike.sh Web Incident
+
+![Spike.sh Web Incident](./output_images/spike-web-triggered.png)
+
 ### 📬 Spike.sh Email Alert
 
 ![Spike.sh Email](./output_images/spike-email-alert.png)
 
-### 🧾 Spike.sh Web Incident
+### ✅ Phone Call Notification (Spike.sh)
 
-![Spike.sh Web Incident](./output_images/spike-web-triggered.png)
+![Phone Call](./output_images/spike-sh-call.png)
 
 ### 🟢 Service Restored
 
@@ -147,10 +151,6 @@ Below are examples demonstrating how the alerting system works when MySQL goes d
 ### 📨 Spike.sh Alert Resolved
 
 ![Spike.sh Resolved](./output_images/spike-alert-resolved.png)
-
-### ✅ Successful Playbook Run
-
-![Playbook Success](./output_images/playbook-run-success.png)
 
 ---
 
