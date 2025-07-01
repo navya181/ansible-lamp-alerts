@@ -47,10 +47,3 @@ rule_files:
 You can add more alerts based on your needs (e.g., service-specific, port checks, disk I/O).
 
 ---
-
-## ✅ Why This README Helps
-
-- Explains **each alert** clearly (for recruiters, reviewers, or teammates)
-- Uses beginner-friendly words like “CPU too high” or “Disk almost full”
-- Tells how the file fits into the monitoring system
-
