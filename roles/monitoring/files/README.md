@@ -43,7 +43,9 @@ And then included in `prometheus.yml` using:
 rule_files:
   - "/etc/prometheus/alert-rules.yml"
 ```
+--- 
+
 ## 📝 Note
 You can add more alerts based on your needs (e.g., service-specific, port checks, disk I/O).
 
----
+
