@@ -39,6 +39,16 @@ Designed for beginner-to-intermediate DevOps learners, this project demonstrates
 
 ```bash
 ansible-lamp-monitor-alert/
+├── output_images/                 # Playbook execution & alert screenshots
+│   ├── playbook-run-success.png
+│   ├── prometheus-mysql-down.png
+│   ├── alertmanager-mysql-down.png
+│   ├── spike-web-triggered.png
+│   ├── spike-email-alert.png
+│   ├── spike-sh-call.png
+│   ├── mysql-started.png
+│   ├── prometheus-resolved.png
+│   └── spike-alert-resolved.png
 ├── inventory/
 │   └── hosts                      # Inventory file for target hosts
 ├── handlers/
@@ -99,6 +109,49 @@ This flag will prompt for the sudo password during execution.
   Triggered by Prometheus alert rules and sent to **Spike.sh** via webhook.  
   You’ll receive real-time notifications through **email**, **SMS**, and **phone call** for service failures like Apache/MySQL downtime.
   
+---
+## 📸 Example Alerts & Monitoring Outputs
+
+Below are examples demonstrating how the alerting system works when MySQL goes down:
+
+### ✅ Phone Call Notification (Spike.sh)
+
+![Phone Call](./output_images/spike-sh-call.png)
+
+### 📉 Prometheus Alert Triggered
+
+![Prometheus Alert](./output_images/prometheus-mysql-down.png)
+
+### 🚨 Alertmanager Display
+
+![Alertmanager](./output_images/alertmanager-mysql-down.png)
+
+### 📬 Spike.sh Email Alert
+
+![Spike.sh Email](./output_images/spike-email-alert.png)
+
+### 🧾 Spike.sh Web Incident
+
+![Spike.sh Web Incident](./output_images/spike-web-triggered.png)
+
+### 🟢 Service Restored
+
+- ✅ MySQL started again:
+
+  ![MySQL Started](./output_images/mysql-started.png)
+
+- ✅ Prometheus shows alert as resolved:
+
+  ![Resolved Alerts](./output_images/prometheus-resolved.png)
+
+### 📨 Spike.sh Alert Resolved
+
+![Spike.sh Resolved](./output_images/spike-alert-resolved.png)
+
+### ✅ Successful Playbook Run
+
+![Playbook Success](./output_images/playbook-run-success.png)
+
 ---
 
 ## 🔐 Security Notes
