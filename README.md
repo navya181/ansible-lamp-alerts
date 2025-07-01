@@ -76,7 +76,7 @@ ansible-lamp-monitor-alert/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/ansible-lamp-alert.git
+git clone https://github.com/navya181/ansible-lamp-alerts.git
 cd ansible-lamp-alert
 ``` 
 
