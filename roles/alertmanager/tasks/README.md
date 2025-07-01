@@ -29,8 +29,8 @@ This role notifies a handler named `Restart Alertmanager` whenever the configura
     - alertmanager
 ```
 📝 Notes
-Make sure Alertmanager is installed and managed by systemd.
 
-The actual alert rules (e.g., for Apache/MySQL) are defined in the monitoring role.
+- Make sure Alertmanager is installed and managed by systemd.
+- The actual alert rules (e.g., for Apache/MySQL) are defined in the monitoring role.
 
 ---
