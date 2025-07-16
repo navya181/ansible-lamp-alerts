@@ -9,10 +9,10 @@
 
   roles:
     - ssh
-    - firewall
     - apache
     - mysql
     - php
+    - firewall
     - monitoring
     - alertmanager
 
